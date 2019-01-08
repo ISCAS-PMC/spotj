@@ -15,12 +15,6 @@ public class SpotJ {
 		this.spot = Native.load("spotj", SpotLibrary.class);
 	}
 	
-	public static void main(String[] args) {
-		final SpotJ spot = new SpotJ();
-		String result = spot.is_included("/home/liyong/git/spot/A.hoa", "/home/liyong/git/spot/B.hoa");
-		System.out.printf("%s\n", result);
-	}
-	
 	public SpotLibrary getSpot() {
 		return spot;
 	}

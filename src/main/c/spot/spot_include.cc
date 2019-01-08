@@ -295,10 +295,9 @@ aut_is_empty(spot::twa_graph_ptr aut)
 
 int main(int argc, char** args) 
 {
-	/*
-	if(argc < 1 || argc > 4) {
-		cerr<<"please input two automata: " << argc;
-		return -1;
+	if(argc != 3) {
+		cerr<<"please input two automata, current number of arguments are " << argc << endl;
+		return -1; 
 	}
 	
 	spot::bdd_dict_ptr dict = spot::make_bdd_dict();
@@ -306,19 +305,7 @@ int main(int argc, char** args)
     auto autA = read_automaton(args[1], dict);
     string ce = is_included(autA, autB);
     cout << ce.c_str() << "\n";
-    cout << args[1] << endl;
-    cout << args[2] << endl;
-    cout << "-------------------" << endl;
-    result_ptr rt = new_ce();
-    is_included(rt, args[1], args[2]);
-    cout << "-------------------" << size_ce(rt) << endl;
-
-    for(int i = 0; i < size_ce(rt); i ++) {
-		//cout << get_ce_char(rt, i) << endl;
-	}
-	cout << "-2";
-	free_ce(rt);
-	*/
+	/*
 	cout << "-1";
 	// test automaton construction
 	spot::bdd_dict_ptr dd = aut_new_dict();
@@ -372,5 +359,6 @@ int main(int argc, char** args)
 	cout << "11" << endl;
 	// Print the resulting automaton.
 	print_hoa(std::cout, aut);
+	*/
 	return 0;
 }
