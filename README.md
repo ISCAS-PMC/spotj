@@ -1,1 +1,5 @@
 # spotj
+
+## Prerequisites
+spot
+
